@@ -1,0 +1,17 @@
+<h1><%=@sub.id ? 'Edit Sub' : 'Create Sub' %> </h1>
+<%# Ternary / Conditional %>
+<%#
+if sub.id
+  'Edit Sub'
+else
+  'create sub'
+end
+%>
+
+<hr/>
+  <%= form_for @sub do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %> 
+  <%# autofocus is the cursor right where you need it %>
+  <%= f.submit %>
+<% end %>
